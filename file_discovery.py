@@ -84,8 +84,16 @@ class ProjectGUI:
             self.button_littlejohn = Button(master, text=links[6], command=lambda: self.update("littlejohn"))
             self.button_safari = Button(master, text=links[7], command=lambda: self.update("safari"))
             self.button_sickness = Button(master, text=links[8], command=lambda: self.update("sickness"))
-
-
+            # Chris' list code stuff
+            # self.buttonsList = []
+            # buttonTypes = ["carpetenter", "framing", "geology"]
+            # for i, button in enumerate(self.buttonTypes):
+            #     self.buttonList.append(Button(master, text=links[i], command=lambda: self.update(button)))
+            #
+            # for i, button in enumerate(self.buttonList):
+            #     button.grid(row=0,column=1,rowspan=1, padx=10, pady=10, sticky=W+E)
+            #
+            #
 
             # LAYOUT
 
