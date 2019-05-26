@@ -1,14 +1,3 @@
-# import io, sys, glob
-#
-# def discover():
-#     for name in glob.glob('VR Projects/Shortcuts to Demos/*'):
-#         if name[-4:] == ".lnk":
-#             print(name)
-#
-#
-# discover()
-#
-
 from tkinter import Tk, Label, Button, Entry, IntVar, END, W, E
 import io, sys, glob, os
 
@@ -34,12 +23,6 @@ class ProjectGUI:
 
         self.total = 0
         self.entered_number = 0
-
-        #self.total_label_text = IntVar()
-        #self.total_label_text.set(self.total)
-        #self.total_label = Label(master, textvariable=self.total_label_text)
-
-        #self.label = Label(master, text="Total:")
 
         ####
         #Instructions to add
@@ -73,7 +56,6 @@ class ProjectGUI:
         self.entry = Entry(master, validate="key", validatecommand=(vcmd, '%P'))
 
 
-        #self.discover_button = Button(master, text="Discover", command=lambda: self.update("discover"))
         try:
             self.button_carpenter = Button(master, text=links[0], command=lambda: self.update("carpenter"))
             self.button_framing = Button(master, text=links[1], command=lambda: self.update("framing"))
@@ -97,9 +79,7 @@ class ProjectGUI:
 
             # LAYOUT
 
-            #self.label.grid(row=0, column=0, sticky=W)
 
-            #self.discover_button.grid(row=0, column=0, sticky=W+E)
             self.button_carpenter.grid(row=0,column=1,rowspan=1, padx=10, pady=10, sticky=W+E)
             self.button_framing.grid(row=0,column=3,rowspan=1, padx=10, pady=10, sticky=W+E)
             self.button_geology.grid(row=0,column=5,rowspan=1, padx=10, pady=10, sticky=W+E)
