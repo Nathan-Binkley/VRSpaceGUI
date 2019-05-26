@@ -97,17 +97,7 @@ class ProjectGUI:
 
 
 
-    def validate(self, new_text):
-        if not new_text: # the field is being cleared
-            self.entered_number = 0
-            return True
-
-        try:
-            self.entered_number = int(new_text)
-            return True
-        except ValueError:
-            return False
-
+    
     def update(self, method):
 
         if method == "carpenter":
