@@ -1,3 +1,13 @@
+#@TODO: Filepathing stuff
+# README.md for every file created
+# Do a readme for the actual project itself
+# figure out if there's any way to do colors in tkinter
+# Dynamic button creation (so they only have to create readme docs)
+# LABELS LABELS LABELS
+# find out if there's something else to do with this because right now idk man.
+
+
+
 from tkinter import Tk, Label, Button, Entry, IntVar, END, W, E
 import io, sys, glob, os
 
@@ -31,7 +41,7 @@ class ProjectGUI:
         # count = last file count + 1
         # Name: <insert name here>
         #
-        # Put your name in the line below in place of <name> (keep the quotes)
+        # Put your name in the line below in place of "<name>" (keep the quotes)
         # self.button_<name> = Button(master, text=links[count], command=lambda: self.update("<name>"))
         #
         # Under #LAYOUT section, put line below replaced with your project name in place of <name>
@@ -39,7 +49,6 @@ class ProjectGUI:
         # self.button_<name>.grid(row=0,column=1,rowspan=1, padx=10, pady=10, sticky=W+E)
         #
         # under the "update(self,method)" function, copy this line while replacing <name> with your Project
-        #
         #
         # elif method == "<name>":
         # Press Tab (Very important)
@@ -97,7 +106,7 @@ class ProjectGUI:
 
 
 
-    
+
     def update(self, method):
 
         if method == "carpenter":
