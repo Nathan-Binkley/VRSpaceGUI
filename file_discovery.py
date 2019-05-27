@@ -10,6 +10,8 @@
 
 from tkinter import Tk, Label, Button, Entry, IntVar, END, W, E
 import io, sys, glob, os
+from importlib import reload
+from file_discovery import ProjectGUI
 
 def discover():
     count = 0
@@ -108,8 +110,9 @@ class ProjectGUI:
 
 
     def update(self, method):
-
-        if method == "carpenter":
+        if method == "update":
+            reload(file_discovery)
+        elif method == "carpenter":
             os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[0])
         elif method == "framing":
             os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[1])
