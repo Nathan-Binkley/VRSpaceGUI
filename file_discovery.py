@@ -11,7 +11,7 @@
 from tkinter import Tk, Label, Button, Entry, IntVar, END, W, E
 import io, sys, glob, os
 from importlib import reload
-from file_discovery import ProjectGUI
+
 
 def discover():
     count = 0
@@ -105,36 +105,41 @@ class ProjectGUI:
         except:
             pass
 
+    def validate(self, new_text):
+        if not new_text: # the field is being cleared
+            self.entered_number = 0
+            return True
 
+        try:
+            self.entered_number = int(new_text)
+            return True
+        except ValueError:
+            return False
 
 
 
     def update(self, method):
-        if method == "update":
-            reload(file_discovery)
-        elif method == "carpenter":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[0])
+        start = 'C:\\Users\\VSpace2\\Desktop\\'
+        if method == "carpenter":
+            os.startfile(start + files[0])
         elif method == "framing":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[1])
+            os.startfile(start + files[1])
         elif method == "geology":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[2])
+            os.startfile(start + files[2])
         elif method == "house1":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[3])
+            os.startfile(start + files[3])
         elif method == "house2":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[4])
+            os.startfile(start + files[4])
         elif method == "house3":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[5])
+            os.startfile(start + files[5])
         elif method == "littlejohn":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[6])
+            os.startfile(start + files[6])
         elif method == "safari":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[7])
+            os.startfile(startfile + files[7])
         elif method == "sickness":
-            os.startfile('C:\\Users\\VSpace2\\Desktop\\' + files[8]) #<-- Last file count.
+            os.startfile(start + files[8]) #<-- Last file count.
         else: # reset
             pass #re-scan for items in future
-
-        self.total_label_text.set(self.total)
-        self.entry.delete(0, END)
 
 
 root = Tk()
