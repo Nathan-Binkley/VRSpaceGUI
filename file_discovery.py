@@ -3,7 +3,7 @@
 # Do a readme for the actual project itself
 # figure out if there's any way to do colors in tkinter
 # Dynamic button creation (so they only have to create readme docs)
-# LABELS LABELS LABELS
+# LABELS LABELS LABELS -- Please label things with basic comments
 # find out if there's something else to do with this because right now idk man.
 
 
