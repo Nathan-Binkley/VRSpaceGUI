@@ -142,6 +142,10 @@ class ProjectGUI:
         else: # reset
             pass #re-scan for items in future
 
+    def print_something(something:str):
+        print(something)
+
+
 
 root = Tk()
 my_gui = ProjectGUI(root)
